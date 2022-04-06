@@ -1,0 +1,12 @@
+body {
+  background: #313394;
+  background: -webkit-linear-gradient(to left, #313394, #595cfc);
+  background: linear-gradient(to left, #313394, #595cfc);
+  min-height: 100vh;
+}
+/* body {
+    background: #dd5e89;
+    background: -webkit-linear-gradient(to left, #dd5e89, #f7bb97);
+    background: linear-gradient(to left, #dd5e89, #f7bb97);
+    min-height: 100vh;
+  } */
