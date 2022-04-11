@@ -15,7 +15,11 @@ const Navbar2 = ({ onCatChange = (selectedCat) => undefined }) => {
   return (
     <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm">
       <div class="container">
-        <Link to="/" class="navbar-brand nav-item">
+        <Link
+          to="/"
+          class="navbar-brand nav-item"
+          style={{ textDecoration: "none" }}
+        >
           <span class="text-uppercase font-weight-bold">Availbale !!!</span>
         </Link>
         <button
@@ -47,19 +51,35 @@ const Navbar2 = ({ onCatChange = (selectedCat) => undefined }) => {
               );
             })} */}
 
-            <Link to="/contact" class="nav-item">
+            <Link
+              to="/contact"
+              class="nav-item"
+              style={{ textDecoration: "none" }}
+            >
               <div class="nav-link">Contact</div>
             </Link>
-            <Link to="/about" class="nav-item">
+            <Link
+              to="/about"
+              class="nav-item"
+              style={{ textDecoration: "none" }}
+            >
               <div class="nav-link">About</div>
             </Link>
-            <Link to="/orders" class="nav-item">
+            <Link
+              to="/orders"
+              class="nav-item"
+              style={{ textDecoration: "none" }}
+            >
               <div class="nav-link">My Orders</div>
             </Link>
             {/* <Link to="/update_profile" class="nav-item">
               <div class="nav-link">Update_profile</div>
             </Link> */}
-            <Link to="/AddCart" class="nav-item">
+            <Link
+              to="/AddCart"
+              class="nav-item"
+              style={{ textDecoration: "none" }}
+            >
               <div class="nav-link">
                 <i class="bi bi-cart-fill"></i>
               </div>

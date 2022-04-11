@@ -12,7 +12,7 @@ const Navbar3 = () => {
   return (
     <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm">
       <div class="container">
-        <Link to="/" class="navbar-brand">
+        <Link to="/" class="navbar-brand" style={{ textDecoration: "none" }}>
           <span class="text-uppercase font-weight-bold">Admin Panel !!!</span>
         </Link>
         <button
@@ -30,23 +30,39 @@ const Navbar3 = () => {
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <Link to="/UserList" class="nav-link">
+              <Link
+                to="/UserList"
+                class="nav-link"
+                style={{ textDecoration: "none" }}
+              >
                 User-List
               </Link>
             </li>
             <li class="nav-item">
-              <Link to="/HotelMenu" class="nav-link">
+              <Link
+                to="/HotelMenu"
+                class="nav-link"
+                style={{ textDecoration: "none" }}
+              >
                 Hotel Menu
               </Link>
             </li>
 
             <li class="nav-item">
-              <Link to="/DeliveryBoyList" class="nav-link">
+              <Link
+                to="/DeliveryBoyList"
+                class="nav-link"
+                style={{ textDecoration: "none" }}
+              >
                 DeliveryBoy-List
               </Link>
             </li>
             <li class="nav-item">
-              <Link to="/allorders" class="nav-link">
+              <Link
+                to="/allorders"
+                class="nav-link"
+                style={{ textDecoration: "none" }}
+              >
                 All Orders
               </Link>
             </li>
