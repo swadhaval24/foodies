@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import * as notification from "../Constants/notification";
 
 const AuthContext = createContext();
 
@@ -15,6 +16,7 @@ export const AuthProvider = ({ children }) => {
     sessionStorage.setItem("userId", "");
     sessionStorage.setItem("user", JSON.stringify({ id: "", role: "" }));
     setUser({ id: "", role: "" });
+    notification.success("Thank You for Trusting Us, Visit Again");
   };
 
   return (
