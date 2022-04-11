@@ -8,7 +8,10 @@ const Navbar4 = () => {
     <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm">
       <div class="container">
         <Link to="/" class="navbar-brand">
-          <span class="text-uppercase font-weight-bold">
+          <span
+            class="text-uppercase font-weight-bold"
+            style={{ textDecoration: "none" }}
+          >
             Delivery Panel !!!
           </span>
         </Link>
@@ -16,7 +19,11 @@ const Navbar4 = () => {
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <Link to="/AllOrdersRecord" class="nav-link">
+              <Link
+                to="/AllOrdersRecord"
+                class="nav-link"
+                style={{ textDecoration: "none" }}
+              >
                 Order Details
               </Link>
             </li>
