@@ -14,13 +14,14 @@ export const CloudCategory = ({ category = "", onBack = () => undefined }) => {
   useEffect(() => {
     (async () => {
       axios
-        .get(url + "/menu/all?menuItem=" + category)
+        .get(url + `/menu/all/${category+1}` )
         .then((response) => {
           const result = response?.data;
           if (result?.status === "success") {
             console.log(result?.data);
             setMenus(
-              result?.data?.filter((item) => item?.menu_type_id === category)
+              result.data
+              // result?.data?.filter((item) => item?.menu_type_id === category)
             );
           }
         })
