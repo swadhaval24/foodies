@@ -5,6 +5,6 @@ export const catgories = [
   "Thali",
   "Sweets",
   "South-Indian",
-  "Roti",
   "Rice",
+  "Roti",
 ];
