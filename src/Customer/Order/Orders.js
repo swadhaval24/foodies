@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { url } from "../../Constants/Url";
 import Navbar2 from "../../Components/C_navbar";
 import { useAuthContext } from "../../contexts/AuthContext";
+import * as notification from "../../Constants/notification";
 
 export const Orders = () => {
   const { user } = useAuthContext();
@@ -15,7 +16,7 @@ export const Orders = () => {
       if (result.status === "success") {
         setOrders(result.data);
       } else {
-        alert("error while loading list of orders");
+        notification.danger("error while loading list of orders");
       }
     });
   };

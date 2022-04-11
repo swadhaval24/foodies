@@ -6,6 +6,8 @@ import { url } from "../../Constants/Url";
 import { useEffect } from "react";
 import Navbar4 from "../../Components/D_navbar";
 import { useAuthContext } from "../../contexts/AuthContext";
+import * as notification from "../../Constants/notification";
+
 const AssignOrder = () => {
   const { orderId } = useParams();
   const { user } = useAuthContext();
@@ -25,7 +27,7 @@ const AssignOrder = () => {
 
   const saveStatus = async () => {
     if (status.length === 0) {
-      alert("select Order status");
+      notification.info("select Order status");
     } else {
       const data = new FormData();
       data.append("orderId", orderId);
@@ -40,11 +42,11 @@ const AssignOrder = () => {
           const result = response.data;
 
           if (result.status === "success") {
-            alert("successfully updated Status");
+            notification.success("successfully updated Status");
 
             navigate("/AllOrdersRecord");
           } else {
-            alert("error while adding menu");
+            notification.danger("error while adding menu");
           }
         });
     }

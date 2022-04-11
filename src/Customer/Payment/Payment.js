@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import axios from "axios";
 import { url } from "../../Constants/Url";
 import { useAuthContext } from "../../contexts/AuthContext";
+import * as notification from "../../Constants/notification";
 
 const Payment = () => {
   const { user } = useAuthContext();
@@ -20,7 +21,7 @@ const Payment = () => {
       if (result.status === "success") {
         setAddresses(result?.data);
       } else {
-        alert("error while loading list of users");
+        notification.danger("error while loading list of users");
       }
     });
   };
@@ -31,9 +32,9 @@ const Payment = () => {
 
   const setPayment = () => {
     if (addressId.length === 0) {
-      alert("please enter addressId");
+      notification.danger("please enter addressId");
     } else if (paymentMode.length === 0) {
-      alert("Enter new paymentMode");
+      notification.info("Enter new paymentMode");
     } else {
       axios
         .post(
@@ -45,10 +46,10 @@ const Payment = () => {
           const result = response.data;
 
           if (result.status === "success") {
-            alert("Your payment Added Successfully !!!");
+            notification.success("Your payment Added Successfully !!!");
             navigate("/");
           } else {
-            alert("payment Failed");
+            notification.danger("payment Failed");
           }
         });
     }
