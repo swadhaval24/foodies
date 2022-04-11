@@ -12,9 +12,9 @@ const MenuTypeRow=({menutype})=>{
        </Link>
       </td>
      <td>   
-     <Link>
+     {/* <Link>
      <button type="button" class="btn btn-danger btn-sm">Delete</button>
-        </Link>      
+        </Link>       */}
     </td>
         </tr>
         

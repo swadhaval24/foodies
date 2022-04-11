@@ -20,7 +20,7 @@ const Navbar2 = ({ onCatChange = (selectedCat) => undefined }) => {
           class="navbar-brand nav-item"
           style={{ textDecoration: "none" }}
         >
-          <span class="text-uppercase font-weight-bold">Availbale !!!</span>
+          <span class="text-uppercase font-weight-bold">Ready to Serve...</span>
         </Link>
         <button
           type="button"

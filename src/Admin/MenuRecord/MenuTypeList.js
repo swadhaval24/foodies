@@ -72,12 +72,13 @@ const MenuType = () => {
     <div>
 
 
-      <div >
-        <table class="table m-0">
+      <div className='col-md-6 mx-auto'  > 
+        <table class="table m-0 text-white "> 
           <thead>
             <tr>
               <th scope="col">MenuType_Id</th>
               <th scope="col">MenuType_Name</th>
+              <th scope="col"></th>
 
 
             </tr>
@@ -92,10 +93,12 @@ const MenuType = () => {
             })}
           </tbody>
         </table>
+     <div>
+     <a href="/AddMenuType" className="btn btn-info m-3">Add_MenuType</a>
 
-        <a href="/AddMenuType" className="btn btn-dark">Add_MenuType</a>
-
-        <a href="/HotelMenu" className="btn btn-info">Back</a>
+     <a href="/HotelMenu" className="btn btn-danger m-3">Back</a>
+     </div>
+        
       </div>
     </div>
 

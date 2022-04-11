@@ -13,7 +13,7 @@ const Navbar3 = () => {
     <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm">
       <div class="container">
         <Link to="/" class="navbar-brand" style={{ textDecoration: "none" }}>
-          <span class="text-uppercase font-weight-bold">Admin Panel !!!</span>
+          <span class="text-uppercase font-weight-bold">Admin Panel...</span>
         </Link>
         <button
           type="button"

@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="container">
         <div className="d-flex">
           <Link to="/CustomerHomePage">
-            <i class="bi bi-arrow-left-circle-fill text-white"></i>
+            <i class="bi bi-arrow-left-circle-fill text-white fs-1"></i>
           </Link>
         </div>
         <div class="bg-light py-5">

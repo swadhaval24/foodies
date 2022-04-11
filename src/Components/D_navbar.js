@@ -12,7 +12,7 @@ const Navbar4 = () => {
             class="text-uppercase font-weight-bold"
             style={{ textDecoration: "none" }}
           >
-            Delivery Panel !!!
+            Delivery Panel...
           </span>
         </Link>
 
