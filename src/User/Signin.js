@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { url } from "../Constants/Url";
 import { useAuthContext } from "../contexts/AuthContext";
 import SigninImg from "../Customer/Images/scooter.gif";
+import * as notification from  "../Constants/notification";
 const Signin = () => {
   const { login } = useAuthContext();
   const navigate = useNavigate();
@@ -12,9 +13,9 @@ const Signin = () => {
 
   const signinUser = () => {
     if (email.length === 0) {
-      alert("please enter email");
+      notification.danger("please enter email");
     } else if (password.length === 0) {
-      alert("please enter password");
+      notification.danger("please enter password");
     } else {
       const body = new FormData();
       body.append("email", email);
@@ -28,8 +29,10 @@ const Signin = () => {
         )
         .then((response) => {
           const result = response.data;
+          console.log(result);
           login(result?.data?.id, result?.data?.role);
           if (result.status === "success") {
+            notification.welcomeMessage(result?.data?.firstName,result?.data?.role);
             navigate("/");
           } else {
             alert("login failed");

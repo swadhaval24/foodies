@@ -35,7 +35,7 @@ const Navbar3 = () => {
               </Link>
             </li>
             <li class="nav-item">
-              <Link to="/MenuList" class="nav-link">
+              <Link to="/HotelMenu" class="nav-link">
                 Hotel Menu
               </Link>
             </li>
