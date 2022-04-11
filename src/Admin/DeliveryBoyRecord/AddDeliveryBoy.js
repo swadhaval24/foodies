@@ -105,7 +105,7 @@ const AddDeliveryBoy = () => {
 
 
   return (
-    <div class="container py-3 text-black" >
+    <div class="col-md-5 mx-auto py-3 text-black" >
       <h1 className="page-title">Add DeliveryBoy</h1>
 
       <div className="mb-3">
@@ -115,6 +115,7 @@ const AddDeliveryBoy = () => {
             setFirstName(e.target.value)
           }}
           type="text"
+          placeholder="Enter the first name"
           className="form-control"
         />
       </div>
@@ -125,6 +126,7 @@ const AddDeliveryBoy = () => {
             setLastName(e.target.value)
           }}
           type="text"
+          placeholder="Enter the last name"
           className="form-control"
         />
       </div>
@@ -135,6 +137,7 @@ const AddDeliveryBoy = () => {
             setEmail(e.target.value)
           }}
           type="text"
+          placeholder="Enter the email"
           className="form-control"
         />
       </div>
@@ -145,6 +148,7 @@ const AddDeliveryBoy = () => {
             setPassword(e.target.value)
           }}
           type="password"
+          placeholder="Enter the password"
           className="form-control"
         />
       </div>
@@ -155,6 +159,7 @@ const AddDeliveryBoy = () => {
             setPhoneNo(e.target.value)
           }}
           type="text"
+          placeholder="Enter Phone No"
           className="form-control"
         />
       </div>
@@ -165,12 +170,13 @@ const AddDeliveryBoy = () => {
             setRole(e.target.value)
           }}
           type="text"
+          placeholder="Enter the role"
           className="form-control"
         />
       </div>
 
-      <div className="mb-3">
-        <button onClick={AddDeliveryBoy} className="btn btn-success">
+      <div className="mb-3" >
+        <button onClick={AddDeliveryBoy} className="btn btn-success me-3">
           Add
         </button>
 
