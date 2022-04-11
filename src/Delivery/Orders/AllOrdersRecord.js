@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { url } from "../../Constants/Url";
 import OrdersRow from "./OrdersRow";
 import Navbar4 from "../../Components/D_navbar";
+import * as notification from "../../Constants/notification";
+
 const AllOrdersRecord = () => {
   const [orders, setOrders] = useState([]);
 
@@ -19,7 +21,7 @@ const AllOrdersRecord = () => {
       if (result.status === "success") {
         setOrders(result.data);
       } else {
-        alert("error while loading list of orders");
+        notification.danger("error while loading list of orders");
       }
     });
   };

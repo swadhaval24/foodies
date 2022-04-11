@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { url } from "../Constants/Url";
 import { useAuthContext } from "../contexts/AuthContext";
 import SigninImg from "../Customer/Images/scooter.gif";
-import * as notification from  "../Constants/notification";
+import * as notification from "../Constants/notification";
 const Signin = () => {
   const { login } = useAuthContext();
   const navigate = useNavigate();
@@ -32,10 +32,13 @@ const Signin = () => {
           console.log(result);
           login(result?.data?.id, result?.data?.role);
           if (result.status === "success") {
-            notification.welcomeMessage(result?.data?.firstName,result?.data?.role);
+            notification.welcomeMessage(
+              result?.data?.firstName,
+              result?.data?.role
+            );
             navigate("/");
           } else {
-            alert("login failed");
+            notification.danger("login failed");
           }
         });
     }
