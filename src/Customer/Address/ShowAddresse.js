@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom'
 import AddressRow from './AddressRow'
 import { url } from '../../Constants/Url'
 import Navbar2 from "../../Components/C_navbar";
-
+import * as notification from "../../Constants/notification"
 const ShowAddress=()=>{
     const [userid]=useState(sessionStorage.getItem("userid"))
     const [addressId,setAddressId]=useState(0)
@@ -30,7 +30,7 @@ const ShowAddress=()=>{
         setCart(result.data)
         // sessionStorage.setItem("addressId");
       } else {
-        alert('error while loading list of cart')
+        notification.danger('error while loading list of cart')
         // alert('Your cart Is Loaded')
       }
     })
@@ -43,7 +43,7 @@ const ShowAddress=()=>{
 <div class="container py-5 text-white">
 <Navbar2></Navbar2>
 <div class="row">
-  <div class="col-lg-9 mx-auto" class="myStyle">
+  <div class="col-lg-9 mx-auto" className="myStyle">
       <div class="card border-0 shadow">
           <div >
               <div >

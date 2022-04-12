@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "../Address/Address.css";
+import * as notification from "../../Constants/notification"
 
 const AddAddress = () => {
   const [addressLine1, setAddressLine1] = useState("");
@@ -46,7 +47,7 @@ const AddAddress = () => {
         .then((Response) => {
           // axios.post(`http://localhost:8080/address/add` ,{'addressLine1':addressLine1,'addressLine2':addressLine2,'city':city,'state': state ,'country':country,'pinCode':pinCode},{"Content-Type": "application/json"}).then((Response)=>{
           // alert("Address Added Successfully !!!")
-          Swal.fire("Success", "Address Added successful");
+          notification.success("Success", "Address Added successful");
           navigate("/OrderDetails");
         });
     }
@@ -54,13 +55,13 @@ const AddAddress = () => {
 
   const addUserAddress = (e) => {
     if (addressLine1.length === 0) {
-      alert("select Address name");
+      notification.info("select Address name");
     } else if (city.length === 0) {
-      alert("select city");
+      notification.info("select city");
     } else if (state.length === 0) {
-      alert("select state");
+      notification.info("select state");
     } else if (pinCode.length === 0) {
-      alert("Enter pincode ");
+      notification.info("Enter pincode ");
     } else {
       e.preventDefault();
       console.log(`addressLine1 = ${addressLine1}`);

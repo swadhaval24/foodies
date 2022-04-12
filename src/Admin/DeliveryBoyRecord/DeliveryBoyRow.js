@@ -4,11 +4,12 @@ import axios from "axios";
 import "../DeliveryBoyRecord/css/list.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import * as notification from "../../Constants/notification"
 const DeliveryBoyRow = ({ user }) => {
   //const history = useHistory()
   const deleteDeliveryBoy = async (id) => {
     await axios.delete(url + `/user/delete/${user.id}`);
-    alert("successfully deleted an deliveryBoy");
+    notification.success("successfully deleted an deliveryBoy");
     //  history.push("/DeliveryBoyList");
   };
   return (

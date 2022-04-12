@@ -2,7 +2,7 @@ import axios from 'axios'
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 // import { url } from '../../Constants/Url'
-
+import * as notification from "../../Constants/notification"
 const AddMenuType = () => {
   
   const [menuType, setMenuType] = useState('')
@@ -12,7 +12,7 @@ const AddMenuType = () => {
 
   const addMenuType = () => {
     if (menuType.length === 0) {
-      alert('select menuType name')
+      notification.info('select menuType name')
     } else{
       
       const data = new FormData()
@@ -25,12 +25,12 @@ const AddMenuType = () => {
       axios.post('http://localhost:8080/menutype/add', data).then((response) => {
         const result = response.data
         if (result.status === 'success') {
-          alert('successfully added an menuType')
+          notification.success('successfully added an menuType')
 
          
          navigate('/MenuTypeList')
         } else {
-          alert('error while adding menuType')
+          notification.danger('error while adding menuType')
         }
       })
     }

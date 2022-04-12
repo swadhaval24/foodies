@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { url } from '../../Constants/Url'
 import MenuTypeRow from '../MenuRecord/MenuTypeRow'
+import * as notification from "../../Constants/notification"
 
 const MenuType = () => {
 
@@ -22,7 +23,7 @@ const MenuType = () => {
       if (result.status === 'success') {
         setMenuType(result?.data);
       } else {
-        alert('error while loading list of menutypes')
+        notification.danger('error while loading list of menutypes')
       }
     });
   };
