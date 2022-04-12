@@ -27,11 +27,11 @@ const Contact = () => {
                   width="100"
                   class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                 />
-                <h5 class="mb-0">Pune ShivajiNagar</h5>
-                <h6>Ph. 7387774573</h6>
+                <h5 class="mb-0">Sangram Wadhaval</h5>
+                <h6>Ph. 9689929749</h6>
                 <span class="small text-uppercase text-muted">
-                  Contact No : 7387774573 Address :CJ Heights,Sadguru
-                  Corner,Shivajinagar, Pune : 415517{" "}
+                   Address :CJ Heights,Sadguru
+                  Corner,Mangaon, Raigad : 402104{" "}
                 </span>
                 <ul class="social mb-0 list-inline mt-3">
                   <li class="list-inline-item">
@@ -65,9 +65,9 @@ const Contact = () => {
                   width="100"
                   class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                 />
-                <h5 class="mb-0">Pimpri-Chinchawad </h5> <h6>Ph. 7387771122</h6>
+                <h5 class="mb-0">Kalyani Mahajan </h5> <h6>Ph. 7744929935</h6>
                 <span class="small text-uppercase text-muted">
-                  Address :Food park,Dange Chowk,Pimpri-chinchwad: 415011{" "}
+                  Address :Sai Raj Residency,Pimple Gurav,Pimpri-chinchwad: 411061{" "}
                 </span>
                 <ul class="social mb-0 list-inline mt-3">
                   <li class="list-inline-item">
@@ -101,11 +101,11 @@ const Contact = () => {
                   width="100"
                   class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                 />
-                <h5 class="mb-0">Pune Kothrud</h5>
-                <h6>Ph.9988774455</h6>
+                <h5 class="mb-0">Siddhesh Wani</h5>
+                <h6>Ph.9004312563</h6>
                 <span class="small text-uppercase text-muted">
                   {" "}
-                  Address :Candent Heights,Chandani-chowk,Kothrud, Pune : 415510{" "}
+                  Address :Shivaji Maharaj-chowk,Ambivali, Kalyan : 421102{" "}
                 </span>
                 <ul class="social mb-0 list-inline mt-3">
                   <li class="list-inline-item">
@@ -139,11 +139,89 @@ const Contact = () => {
                   width="100"
                   class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
                 />
-                <h5 class="mb-0">Pune Hadapsar</h5>
-                <h6>Ph. 73888446677</h6>
+                <h5 class="mb-0">Priyanka Shinde</h5>
+                <h6>Ph. 9049522932</h6>
                 <span class="small text-uppercase text-muted">
-                  Address :A1 TOWER,Magarpatta south-gate,Hadapsar, Pune :
-                  415001{" "}
+                  Address :A1 TOWER,Lokmanya Nagar, Palghar :
+                  401404{" "}
+                </span>
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link">
+                      <i class="fa fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img
+                  src=""
+                  alt=""
+                  width="100"
+                  class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                />
+                <h5 class="mb-0">Rohan Wani</h5>
+                <h6>Ph. 8830560448</h6>
+                <span class="small text-uppercase text-muted">
+                  Address :Aakash Colony,Shriram Nagar, Jalgaon :
+                  421004{" "}
+                </span>
+                <ul class="social mb-0 list-inline mt-3">
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link">
+                      <i class="fa fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link">
+                      <i class="fa fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" class="social-link">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img
+                  src=""
+                  alt=""
+                  width="100"
+                  class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+                />
+                <h5 class="mb-0">Pavan Nangare-Patil</h5>
+                <h6>Ph. 272083838</h6>
+                <span class="small text-uppercase text-muted">
+                  Address :Gagan tower,kharadi south-gate,Karad, Satara :
+                  410001{" "}
                 </span>
                 <ul class="social mb-0 list-inline mt-3">
                   <li class="list-inline-item">

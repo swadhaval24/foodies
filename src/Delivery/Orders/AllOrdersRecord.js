@@ -29,6 +29,7 @@ const AllOrdersRecord = () => {
   return (
     <section class="pb-5 header text-center">
       <Navbar4></Navbar4>
+      <h2 className="page-title text-info"><b>Customer Orders for Delivery</b></h2>
       <div class="container py-5 text-white">
         <div class="row">
           <div class="col-lg-9 mx-auto">

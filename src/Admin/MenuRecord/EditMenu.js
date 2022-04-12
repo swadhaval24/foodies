@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
-
+import * as notification from "../../Constants/notification"
 const EditMenu = () => {
   const navigate = useNavigate();
     const [menuId,setMenuId]=useState('')
@@ -12,9 +12,9 @@ const EditMenu = () => {
     const [menu, setMenu] = useState([])
     const changeMenu = () => {
         if (price.length === 0) {
-            alert('please enter price')
+           notification.info('please enter price')
         } else if (description.length === 0) {
-            alert('Enter new description')
+          notification.info('Enter new description')
         } else {
            
          const menuId=sessionStorage.getItem("menuId");
@@ -32,10 +32,10 @@ const EditMenu = () => {
                 // sessionStorage.setItem("userId" , result.data.id)
                 if (result.status === 'success') {
                     console.log("update Successfull!!!!!")
-                    alert("Your Menu changed Successfully !!!")
+                    notification.success("Your Menu changed Successfully !!!")
                        navigate('/menuList') 
                 } else {
-                    alert('Edit menu failed')
+                  notification.danger('Edit menu failed')
                 }
             }
             )

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { url } from "../../Constants/Url";
 import { useAuthContext } from "../../contexts/AuthContext";
 import Navbar3 from "../../Components/A_navbar";
-
+import * as notification from "../../Constants/notification"
 export const OrderList = () => {
   const { user } = useAuthContext();
   const [orders, setOrders] = useState([]);
@@ -16,7 +16,7 @@ export const OrderList = () => {
       if (result.status === "success") {
         setOrders(result.data);
       } else {
-        alert("error while loading list of orders");
+        notification.danger("error while loading list of orders");
       }
     });
   };
@@ -29,6 +29,7 @@ export const OrderList = () => {
     <section class="pb-5 header text-center">
       <div class="text-white">
         <Navbar3 />
+      <h2 className="page-title text-info"><b>Customer Order Catalog</b></h2>
         <div className="container">
           <div class="row">
             <div class="col-lg-9 mx-auto my-5">

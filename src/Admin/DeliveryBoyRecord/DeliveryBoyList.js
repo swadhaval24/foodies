@@ -5,6 +5,7 @@ import { url } from "../../Constants/Url";
 import DeliveryBoyRow from "../DeliveryBoyRecord/DeliveryBoyRow";
 import Navbar3 from "../../Components/A_navbar";
 import { useHistory } from "react-router";
+import * as notification from "../../Constants/notification"
 
 const DeliveryBoyList = () => {
   const [deliveryBoyList, setDeliveryBoyList] = useState([]);
@@ -22,7 +23,7 @@ const DeliveryBoyList = () => {
         if (result?.status === "success") {
           setDeliveryBoyList(result.data);
         } else {
-          alert("error while loading list of DeliveryBoyList");
+          notification.danger("error while loading list of DeliveryBoyList");
         }
       })
       .catch((error) => {

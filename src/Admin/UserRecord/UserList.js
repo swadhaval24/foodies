@@ -4,7 +4,7 @@ import Navbar3 from "../../Components/A_navbar";
 
 import { url } from "../../Constants/Url";
 import UserRow from "./UserRow";
-
+import * as notification from "../../Constants/notification"
 const UserList = () => {
   const [users, setUsers] = useState([]);
 
@@ -19,7 +19,7 @@ const UserList = () => {
       if (result.status === "success") {
         setUsers(result.data);
       } else {
-        alert("error while loading list of users");
+        notification.danger("error while loading list of users");
       }
     });
   };

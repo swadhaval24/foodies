@@ -7,6 +7,7 @@ import { url } from "../../Constants/Url";
 import { useState } from "react";
 import Navbar2 from "../../Components/C_navbar";
 import { useAuthContext } from "../../contexts/AuthContext";
+import * as notification from "../../Constants/notification"
 
 const OrderDetails = () => {
   const { user } = useAuthContext();
@@ -24,7 +25,7 @@ const OrderDetails = () => {
 
   const deleteAddress = async (id) => {
     await axios.delete(url + `/address/delete/${addresse.id}`);
-    alert("successfully deleted an menu");
+    notification.success("successfully deleted an menu");
   };
 
   const getAddresse = () => {
@@ -34,7 +35,7 @@ const OrderDetails = () => {
       if (result.status === "success") {
         setAddresse(result.data);
       } else {
-        alert("error while loading list of users");
+        notification.danger("error while loading list of users");
       }
     });
   };
@@ -44,7 +45,7 @@ const OrderDetails = () => {
       if (result.status === "success") {
         setCart(result.data);
       } else {
-        alert("error while loading list of cart");
+        notification.danger("error while loading list of cart");
       }
     });
   };

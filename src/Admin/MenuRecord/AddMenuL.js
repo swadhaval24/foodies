@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { url } from '../../Constants/Url'
 import { useEffect } from 'react'
+import * as notification from "../../Constants/notification"
 
 const AddMenu = () => {
   const [imageName, setImageName] = useState(undefined)
@@ -29,13 +30,13 @@ const AddMenu = () => {
           const addMenu = () => {
             console.log(menutypeId);
             if (menuName.length === 0) {
-              alert('select menu name')
+              notification.info('select menu name')
             } else if (price.length === 0) {
-              alert('select price')
+              notification.info('select price')
             } else if (!imageName) {
-              alert('select Image')
+              notification.info('select Image')
             } else if(description.length===0) {
-                alert('Enter description ')
+              notification.info('Enter description ')
             }else{
               
               const data = new FormData()
@@ -49,13 +50,13 @@ const AddMenu = () => {
                 
                 const result = response.data
                 if (result.status === 'success') {
-                  alert('successfully added an menu')
+                  notification.success('successfully added an menu')
         
                  
                  navigate('/MenuList')
                 } else {
                   // alert('error while adding menu')
-                  alert('successfully added an menu')
+                  notification.success('successfully added an menu')
                 }
               })
           
@@ -67,7 +68,7 @@ const AddMenu = () => {
   
 
   return (
-    <div class="container py-3 text-b">
+    <div class="col-md-5 mx-auto py-3 text-info">
       <h2 className="page-title"><b>Add Menu</b></h2>
 
       
@@ -79,6 +80,7 @@ const AddMenu = () => {
             setMenuName(e.target.value)
           }}
           type="text"
+          placeholder="Enter the menu name"
           className="form-control"
         />
         <label htmlFor=""><b>Menu Name</b></label>
@@ -90,6 +92,7 @@ const AddMenu = () => {
             setPrice(e.target.value)
           }}
           type="text"
+          placeholder="Enter the price"
           className="form-control"
         />
          <label htmlFor=""><b>Price</b></label>
@@ -124,6 +127,7 @@ const AddMenu = () => {
                         <option value = "8">Roti</option>  
                         
                         </select>
+                        <label htmlFor=""><b>Menu Type</b></label>
                      </div>
 
 
@@ -174,18 +178,20 @@ const AddMenu = () => {
         />
       </div> */}
      
-      <div clas sName="mb-3">
-      <label htmlFor=""><b>Description</b></label>
+      <div className="mb-3">
+      
         <input
           onChange={(e) => {
             setDescription(e.target.value)
           }}
           type="text"
+          placeholder="Enter the description"
           className="form-control"
         />
+        <label htmlFor=""><b>Description</b></label>
       </div>
       <div className="mb-3">
-        <button onClick={addMenu} className="btn btn-success">
+        <button onClick={addMenu} className="btn btn-success me-3">
           Add
         </button>
 

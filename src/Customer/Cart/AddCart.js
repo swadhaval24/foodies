@@ -5,6 +5,7 @@ import CartRow from "./CartRow";
 import { url } from "../../Constants/Url";
 import Navbar2 from "../../Components/C_navbar";
 import { useAuthContext } from "../../contexts/AuthContext";
+import * as notification from "../../Constants/notification"
 
 const AddCart = () => {
   const { user } = useAuthContext();
@@ -25,7 +26,7 @@ const AddCart = () => {
         if (result.status === "success") {
           setCart(result.data);
         } else {
-          alert("error while loading list of cart");
+          notification.danger("error while loading list of cart");
         }
       })
       .catch((error) => {
@@ -42,7 +43,7 @@ const AddCart = () => {
           alert("deleted succesfully");
           getCart();
         } else {
-          alert("error while loading list of cart");
+          notification.danger("error while loading list of cart");
         }
       })
       .catch((error) => {

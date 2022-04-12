@@ -105,7 +105,7 @@ const AddDeliveryBoy = () => {
 
 
   return (
-    <div class="col-md-5 mx-auto py-3 text-black" >
+    <div class="col-md-5 mx-auto py-3 text-info" >
       <h1 className="page-title">Add DeliveryBoy</h1>
 
       <div className="mb-3">
