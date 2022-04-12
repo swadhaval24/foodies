@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { url } from "../../Constants/Url";
 import MenuRow from "./MenuRow";
 import Navbar3 from "../../Components/A_navbar";
+import * as notification from "../../Constants/notification";
 
 const Menu = () => {
   const [menu, setMenu] = useState([]);
@@ -19,7 +20,7 @@ const Menu = () => {
       if (result.status === "success") {
         setMenu(result.data);
       } else {
-        alert("error while loading list of menu");
+        notification.danger("error while loading list of menu");
       }
     });
   };

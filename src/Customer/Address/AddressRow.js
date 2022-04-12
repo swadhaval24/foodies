@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { url } from '../../Constants/Url'
-
+import * as notification from "../../Constants/notification"
 const AddressRow = ({ addresse}) => {
   const deleteAddress= async id => {
     await axios.delete(url + `/address/delete/${addresse.id}`)
-    alert('successfully deleted an menu')
+    notification.success('successfully deleted an menu')
   }
 
   // sessionStorage.setItem("addressId",{addresse.});
